@@ -1,0 +1,103 @@
+:root {
+  --main: #0d0f14;
+  --sec: rgb(0, 39, 132);
+  --sub-card-color: rgb(191, 191, 191);
+  --navbar-color: #11131a;
+  --main-font: "Inter Tight";
+}
+body {
+  font-family: var(--main-font);
+}
+.bg-main {
+  background-color: var(--main);
+}
+p {
+  margin-bottom: 0 !important ;
+}
+
+/* Navbar */
+.navbar {
+  background-color: var(--navbar-color) !important;
+}
+
+.navbar-collapse {
+  flex-grow: 0;
+}
+.navbar-collapse a {
+  color: white !important;
+}
+
+.navbar-brand {
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: white !important;
+}
+/* Card */
+
+.game-title {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: white;
+}
+.game-desc {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: var(--sub-card-color);
+}
+.game-sub {
+  font-size: 0.8rem;
+  font-weight: 200;
+  color: var(--sub-card-color);
+}
+.game-price {
+  background-color: var(--sec);
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: white;
+}
+
+.game-title-spes {
+  font-size: 3rem;
+  font-weight: 900;
+  color: white;
+}
+.game-desc-spes {
+  font-size: 1rem;
+  font-weight: 200;
+  color: white;
+  line-height: 1.9;
+}
+.game-sub-spes {
+  /* font-size: 1rem; */
+  font-weight: 300;
+  color: var(--sub-card-color);
+}
+.game-price-spes {
+  background-color: var(--sec);
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: white;
+}
+
+.badge-spec {
+  background-color: grey;
+  border-radius: 0.2rem;
+  padding: 0.1rem 0.3rem;
+  color: white;
+}
+.category a,
+.platform a {
+  text-decoration: none;
+}
+.category,
+.platform {
+  font-size: 0.88rem;
+}
+.details {
+  letter-spacing: 1px;
+}
+.btn-yellow {
+  background-color: rgb(255, 213, 0);
+  width: 100%;
+}

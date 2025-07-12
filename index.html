@@ -11,9 +11,172 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Luckiest+Guy&family=Outfit:wght@100..900&family=Poiret+One&display=swap"
+      rel="stylesheet"
+    />
     <title>Game Finder</title>
   </head>
-  <body>
+  <body class="bg-main">
+    <div class="home-page d-none">
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg bg-body-tertiary py-3">
+        <div class="container d-flex align-items-center">
+          <div class="navbar-logo d-flex align-items-center gap-2">
+            <img
+              src="https://routeegy.github.io/GameOOP/assets/images/logo-sm.png"
+              alt=""
+              width="30px"
+            />
+            <a class="navbar-brand" href="#">Game Finder</a>
+          </div>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav gap-3">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"
+                  >Mmorpg</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Shooting</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Sailing</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Permadeath</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Super Hero</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Pixel</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- Main -->
+      <div class="main mt-5">
+        <div class="container">
+          <div class="row g-4">
+            <div class="col-md-4">
+              <div class="game-card w-100">
+                <div
+                  class="img w-100 rounded-3 overflow-hidden position-relative"
+                >
+                  <img
+                    src="https://www.freetogame.com/g/57/thumbnail.jpg"
+                    alt=""
+                    width="100%"
+                  />
+                  <p
+                    class="game-price position-absolute start-0 end-0 bottom-0 text-center py-1"
+                  >
+                    Free
+                  </p>
+                </div>
+                <div class="card-content w-100 px-1">
+                  <div class="d-flex justify-content-between my-2">
+                    <p class="game-sub">Shooter</p>
+                    <p class="game-sub">PC Windows</p>
+                  </div>
+                  <p class="game-title mb-2">Fortnite</p>
+                  <p class="game-desc">
+                    A free-to-play standalone mode of Epic Game's Fortnite.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="game-details-page">
+      <div class="container">
+        <div class="row d-flex justify-content-center mt-5">
+          <div class="col-md-8">
+            <div class="row">
+              <div class="col-md-8 h-100">
+                <div
+                  class="img w-100 rounded-3 overflow-hidden position-relative"
+                >
+                  <img
+                    src="https://www.freetogame.com/g/57/thumbnail.jpg"
+                    alt=""
+                    width="100%"
+                  />
+                  <p
+                    class="game-price position-absolute start-0 end-0 bottom-0 text-center py-1"
+                  >
+                    Free
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-4 h-100">
+                <div class="card-content d-flex flex-column w-100 px-1">
+                  <p class="game-title-spes mb-2">Fortnite</p>
+                  <div class="details">
+                    <div class="category d-flex flex-column my-2">
+                      <p class="game-sub-spes text-white fw-lighter mb-2">
+                        Category
+                      </p>
+                      <a href=""><span class="badge-spec">Shooter</span></a>
+                    </div>
+                    <div class="platform d-flex flex-column my-2">
+                      <p class="game-sub-spes text-white fw-lighter mb-2">
+                        Platform
+                      </p>
+                      <a href=""><span class="badge-spec">PC Windows</span></a>
+                    </div>
+                    <div class="platform d-flex flex-column my-2">
+                      <p class="game-sub-spes text-white fw-lighter mb-2">
+                        Status
+                      </p>
+                      <a href=""><span class="badge-spec">Live</span></a>
+                    </div>
+                  </div>
+                  <button class="btn btn-yellow mt-4">Get Game</button>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <p class="game-desc-spes mt-3">
+                Fortnite Battle Royale is a free-to-play, standalone mode of
+                Epic Game’s Fortnite. The game offers players one giant map that
+                will accommodate 100-player is an all-out PvP battle. Like the
+                game it is spun off from, it also features the ability to build
+                structures and a destructable environment. There’s also a battle
+                bus. Also like the main Fortnite game, Battle Royale is
+                available on several platforms, including PC, PlayStation 4 and
+                Xbox One. Players of other battle royale style games will be
+                able to jump into Fortnite Battle Royale easily. Similar to
+                other games, players are dropped onto an island where they’re
+                tasked with gathering weapons and supplies while eliminating the
+                competition. To make things a bit more difficult, the map size
+                will shrink over time — thanks to a storm — pushing players
+                closer to each other and eliminating their ability to hide. Last
+                man standing wins the battle.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- Bootstrap script -->
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
@@ -26,6 +189,6 @@
       crossorigin="anonymous"
     ></script>
     <!-- My script -->
-    <script src="assets/js/script.js"></script>
+    <script type="module" src="assets/js/script.js"></script>
   </body>
 </html>
