@@ -1,3 +1,6 @@
-import { displayGames } from "./home.js";
+import { displayGames, setActiveNav } from "./home.js";
+import { displayGameDetails } from "./details.js";
 
-displayGames("shooter");
+displayGames("mmorpg");
+setActiveNav("mmorpg");
+// displayGameDetails("452");
