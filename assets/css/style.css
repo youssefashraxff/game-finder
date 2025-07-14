@@ -14,7 +14,12 @@ body {
 p {
   margin-bottom: 0 !important ;
 }
-
+.text-grey {
+  color: var(--sub-card-color);
+}
+.border-bottom-grey {
+  border-bottom: solid var(--sub-card-color) 0.5px;
+}
 /* Navbar */
 .navbar {
   background-color: var(--navbar-color) !important;
@@ -58,7 +63,7 @@ p {
 }
 
 .game-title-spes {
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 900;
   color: white;
 }
@@ -78,6 +83,12 @@ p {
   font-size: 0.8rem;
   font-weight: 400;
   color: white;
+}
+.main .game-card {
+  transition: 0.3s;
+}
+.main .game-card:hover {
+  transform: scale(1.02);
 }
 
 .badge-spec {
@@ -99,5 +110,12 @@ p {
 }
 .btn-yellow {
   background-color: rgb(255, 213, 0);
+  font-size: 0.8rem;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-radius: 10px;
   width: 100%;
+}
+.btn-yellow:hover {
+  background-color: rgb(255, 227, 90);
 }

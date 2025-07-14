@@ -1,3 +1,3 @@
-import { getGames } from "./ui.js";
+import { displayGames } from "./home.js";
 
-// getGames();
+displayGames("shooter");
