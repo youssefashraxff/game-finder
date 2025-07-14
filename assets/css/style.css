@@ -3,7 +3,7 @@
   --sec: rgb(0, 39, 132);
   --blue: rgb(0, 64, 212);
   --blue-hover: rgb(0, 64, 212);
-  --sub-card-color: rgb(191, 191, 191);
+  --sub-card-color: rgb(181, 181, 181);
   --navbar-color: #11131a;
   --main-font: "Inter Tight";
 }
@@ -40,12 +40,26 @@ p {
   text-transform: uppercase;
   color: white !important;
 }
-
+.navbar .nav-item a.nav-link {
+  color: var(--sub-card-color) !important;
+  font-weight: 100;
+}
 .navbar .nav-item a.nav-link.active-nav {
-  color: var(--blue) !important;
+  color: white !important;
 }
 .navbar .nav-item a.nav-link:hover {
-  color: var(--blue-hover) !important;
+  color: white !important;
+}
+
+.loading-spinner-div {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.home-page .main {
+  margin-top: 8rem !important;
+}
+.home-page .image {
+  z-index: -1;
 }
 /* Card */
 
@@ -83,7 +97,6 @@ p {
   line-height: 1.9;
 }
 .game-sub-spes {
-  /* font-size: 1rem; */
   font-weight: 300;
   color: var(--sub-card-color);
 }
@@ -95,6 +108,9 @@ p {
 }
 .main .game-card {
   transition: 0.3s;
+}
+.main .row {
+  z-index: -1;
 }
 .main .game-card:hover {
   transform: scale(1.02);
@@ -127,4 +143,8 @@ p {
 }
 .btn-yellow:hover {
   background-color: rgb(255, 227, 90);
+}
+
+.exit-btn {
+  cursor: pointer;
 }

@@ -1,12 +1,18 @@
 import { GameCard } from "./ui.js";
 import { Game } from "./game.js";
+import { displayGameDetails } from "./details.js";
 
 let cardsContainer = document.querySelector(".cards-container");
+let mainPage = document.querySelector(".home-page");
+let gameDetailsPage = document.querySelector(".game-details-page");
+
+let loading = document.querySelector(".loading-spinner");
+
 let navItems = document.querySelectorAll(".nav-link");
 
-let wantedCategory = "";
-
 export async function displayGames(category) {
+  loading.classList.remove("d-none");
+
   const options = {
     method: "GET",
     headers: {
@@ -39,9 +45,19 @@ export async function displayGames(category) {
     let gameCard = new GameCard(game);
     cardsContainer.appendChild(gameCard.render());
   }
+  let allGames = document.querySelectorAll(".main .game-card");
+  allGames.forEach((selectedGame) => {
+    selectedGame.addEventListener("click", function () {
+      console.log(selectedGame.getAttribute("data-id"), "CLicked");
+      mainPage.classList.add("d-none");
+      gameDetailsPage.classList.remove("d-none");
+      displayGameDetails(selectedGame.getAttribute("data-id"));
+    });
+  });
+  loading.classList.add("d-none");
 }
 
-// ✅ Correct nav click handler
+// Navbar Handle
 navItems.forEach((nav) => {
   nav.addEventListener("click", function (e) {
     e.preventDefault();

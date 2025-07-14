@@ -1,5 +1,16 @@
-let gameDetailsPage = document.querySelector(".game-details-page");
-async function displayGameDetails(id) {
+import { Game, GameDetails } from "./game.js";
+import { GameDetailPage } from "./ui.js";
+
+let detailsContainer = document.querySelector(".game-details-page .container");
+let exitButton = document.querySelector(".exit-btn");
+
+let loading = document.querySelector(".loading-spinner");
+
+export async function displayGameDetails(id) {
+  detailsContainer.innerHTML = "";
+
+  loading.classList.remove("d-none");
+
   const options = {
     method: "GET",
     headers: {
@@ -12,6 +23,29 @@ async function displayGameDetails(id) {
     options
   );
   let response = await data.json();
-  gameDetailsPage.classList.remove("d-none");
+  let game = new Game(
+    response.id,
+    response.title,
+    response.genre,
+    response.platform,
+    response.short_description,
+    response.thumbnail,
+    response.game_url,
+    response.publisher,
+    response.developer,
+    response.release_date
+  );
+  let gameDetails = new GameDetails(
+    game,
+    response.description,
+    response.screenshots
+  );
+  let gameDetailPage = new GameDetailPage(gameDetails);
+  detailsContainer.appendChild(gameDetailPage.render());
+
+  loading.classList.add("d-none");
 }
-export { displayGameDetails };
+exitButton.addEventListener("click", function () {
+  document.querySelector(".home-page").classList.remove("d-none");
+  document.querySelector(".game-details-page").classList.add("d-none");
+});

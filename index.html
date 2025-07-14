@@ -22,9 +22,27 @@
     <title>Game Finder</title>
   </head>
   <body class="bg-main">
+    <!--  Loading Spinner -->
+    <div class="loading-spinner-div">
+      <div
+        class="loading-spinner d-none text-center py-5 position-absolute top-50 start-50 translate-middle text-center"
+      >
+        <div
+          class="spinner-border text-white"
+          role="status"
+          style="width: 3rem; height: 3rem"
+        >
+          <span class="visually-hidden">Loading...</span>
+        </div>
+        <p class="text-white mt-3 fw-lighter">Loading...</p>
+      </div>
+    </div>
+    <!-- Home Page -->
     <div class="home-page">
       <!-- Navbar -->
-      <nav class="navbar navbar-expand-lg bg-body-tertiary py-3">
+      <nav
+        class="navbar navbar-expand-lg bg-body-tertiary py-3 position-fixed top-0 start-0 end-0"
+      >
         <div class="container d-flex align-items-center">
           <div class="navbar-logo d-flex align-items-center gap-2">
             <img
@@ -67,167 +85,18 @@
         </div>
       </nav>
       <!-- Main -->
-      <div class="main mt-5">
+      <div class="main">
         <div class="container">
-          <div class="row g-4 cards-container"></div>
+          <div class="row g-5 cards-container"></div>
         </div>
       </div>
     </div>
+    <!-- Details Page -->
     <div class="game-details-page d-none">
-      <i
-        onclick="returnHome()"
-        class="fa-solid fa-xmark fs-4 text-white pt-4 ps-4"
-      ></i>
-      <div class="container">
-        <div class="row mt-5">
-          <!-- Game Image -->
-          <div class="col-xl-8 col-lg-12 order-0 h-100">
-            <div class="img w-100 rounded-3 overflow-hidden position-relative">
-              <img
-                src="https://www.freetogame.com/g/452/thumbnail.jpg"
-                alt=""
-                width="100%"
-              />
-              <p
-                class="game-price position-absolute start-0 end-0 bottom-0 text-center py-1"
-              >
-                Free
-              </p>
-            </div>
-          </div>
-          <!-- Game Details -->
-          <div class="col-xl-4 col-lg-12 order-1 h-100">
-            <div class="card-content d-flex flex-column flex-nowrap w-100 px-1">
-              <p class="game-title-spes mb-2 mt-3">Call Of Duty: Warzone</p>
-              <div
-                class="details d-flex justify-content-start align-items-center gap-3"
-              >
-                <div class="category d-flex flex-column my-2">
-                  <p class="game-sub-spes text-white fw-lighter mb-2">
-                    Category
-                  </p>
-                  <a href=""><span class="badge-spec">Shooter</span></a>
-                </div>
-                <div class="platform d-flex flex-column my-2">
-                  <p class="game-sub-spes text-white fw-lighter mb-2">Status</p>
-                  <a href=""><span class="badge-spec">Live</span></a>
-                </div>
-              </div>
-
-              <a
-                class="mt-4"
-                href="https://www.freetogame.com/open/call-of-duty-warzone"
-              >
-                <button
-                  class="btn btn-yellow mb-auto text-decoration-none text-black"
-                >
-                  Get Game
-                </button></a
-              >
-              <div class="tech-details mt-3">
-                <div
-                  class="d-flex justify-content-between align-items-center border-bottom-grey text-white fw-light py-2 mt-2"
-                >
-                  <p class="text-grey">Developer</p>
-                  <p>Infinity Ward</p>
-                </div>
-                <div
-                  class="d-flex justify-content-between align-items-center border-bottom-grey text-white fw-light py-2 mt-2"
-                >
-                  <p class="text-grey">Publisher</p>
-                  <p>Activision</p>
-                </div>
-                <div
-                  class="d-flex justify-content-between align-items-center border-bottom-grey text-white fw-light py-2 mt-2"
-                >
-                  <p class="text-grey">Release Date</p>
-                  <p>2020-03-10</p>
-                </div>
-                <div
-                  class="d-flex justify-content-between align-items-center border-bottom-grey text-white fw-light py-2 mt-2"
-                >
-                  <p class="text-grey">Platform</p>
-                  <i class="fa-brands fa-windows"></i>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Game Description -->
-          <div class="description-sec col-xl-8 col-lg-12 order-2">
-            <p class="game-desc-spes mt-3">
-              Call of Duty: Warzone is both a standalone free-to-play battle
-              royale and modes accessible via Call of Duty: Modern Warfare.
-              Warzone features two modes — the general 150-player battle royle,
-              and “Plunder”. The latter mode is described as a “race to deposit
-              the most Cash”. In both modes players can both earn and loot cash
-              to be used when purchasing in-match equipment, field upgrades, and
-              more. Both cash and XP are earned in a variety of ways, including
-              completing contracts. An interesting feature of the game is one
-              that allows players who have been killed in a match to rejoin it
-              by winning a 1v1 match against other felled players in the Gulag.
-              Of course, being a battle royale, the game does offer a battle
-              pass. The pass offers players new weapons, playable characters,
-              Call of Duty points, blueprints, and more. Players can also earn
-              plenty of new items by completing objectives offered with the
-              pass.
-            </p>
-          </div>
-          <!-- Carousel -->
-          <div
-            class="carousel slide carousel-fade col-xl-4 col-lg-12 order-3 mt-3"
-            id="carouselExampleFade"
-          >
-            <div class="carousel-inner rounded-4">
-              <div class="carousel-item active">
-                <img
-                  src="https://www.freetogame.com/g/452/Call-of-Duty-Warzone-1.jpg"
-                  class="d-block w-100"
-                  alt="..."
-                />
-              </div>
-              <div class="carousel-item">
-                <img
-                  src="https://www.freetogame.com/g/452/Call-of-Duty-Warzone-2.jpg"
-                  class="d-block w-100"
-                  alt="..."
-                />
-              </div>
-              <div class="carousel-item">
-                <img
-                  src="https://www.freetogame.com/g/452/Call-of-Duty-Warzone-3.jpg"
-                  class="d-block w-100"
-                  alt="..."
-                />
-              </div>
-            </div>
-            <button
-              class="carousel-control-prev"
-              type="button"
-              data-bs-target="#carouselExampleFade"
-              data-bs-slide="prev"
-            >
-              <span
-                class="carousel-control-prev-icon"
-                aria-hidden="true"
-              ></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button
-              class="carousel-control-next"
-              type="button"
-              data-bs-target="#carouselExampleFade"
-              data-bs-slide="next"
-            >
-              <span
-                class="carousel-control-next-icon"
-                aria-hidden="true"
-              ></span>
-              <span class="visually-hidden">Next</span>
-            </button>
-          </div>
-        </div>
-      </div>
+      <i class="fa-solid fa-xmark fs-4 text-white pt-4 ps-4 exit-btn"></i>
+      <div class="container"></div>
     </div>
+
     <!-- Bootstrap script -->
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"

@@ -23,3 +23,21 @@ export class Game {
     this.release_date = release_date;
   }
 }
+export class GameDetails extends Game {
+  constructor(game, description, screenshots) {
+    super(
+      game.id,
+      game.title,
+      game.category,
+      game.platform,
+      game.short_description,
+      game.thumbnail,
+      game.game_url,
+      game.publisher,
+      game.developer,
+      game.release_date
+    );
+    this.description = description;
+    this.screenshots = screenshots;
+  }
+}
