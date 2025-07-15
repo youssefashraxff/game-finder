@@ -25,6 +25,7 @@ p {
 /* Navbar */
 .navbar {
   background-color: var(--navbar-color) !important;
+  z-index: 999 !important;
 }
 
 .navbar-collapse {
